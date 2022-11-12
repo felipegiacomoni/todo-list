@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import TodoCreate from "./components/TodoCreate";
+import TodoEdit from "./components/TodoEdit";
 import TodoList from "./components/TodoList";
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" exact element={<TodoList/>} />
                     <Route path="/create" exact element={<TodoCreate/>} />
+                    <Route path="/edit/:id" element={<TodoEdit/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
